@@ -60,8 +60,8 @@ int main() {
 
                 cout << sbuf << endl;
                 write(clientSock, sbuf.str().c_str(), sbuf.str().size());
-                //string str = "\r\n";
-    			//write(clientSock, str.c_str(), sizeof(str.c_str()));
+                string str = "\r\n";
+    			write(clientSock, str.c_str(), sizeof(str.c_str()));
                 /* deserialize the buffer into msgpack_object instance. */
                 /* deserialized object is valid during the msgpack_zone instance alive. */
                 cout << sbuf.str().c_str() << endl;
